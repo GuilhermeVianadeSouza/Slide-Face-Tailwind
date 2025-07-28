@@ -1,0 +1,29 @@
+.carrosel{
+    animation: slider 12s infinite, fade 4s;
+}
+
+@keyframes slider {
+    0%, 33% {
+        background-image: url(./img/lazer.jpg);
+        --text-description: "Intervalo com os Colegas"
+    }
+    34%, 66% {
+        background-image: url(./img/biblioteca.jpg);
+        --text-description: "Projeto em grupo que realizamos"
+    }
+    67%, 100% {
+        background-image: url(./img/TurmaPingas.jpg);
+        --text-description: "Pessoal do ping pong infinito, felicidade"
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    15%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
