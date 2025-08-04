@@ -5,11 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Slider Senai Tailwind</title>
+    <style type="text/tailwindcss">
+        .carrosel{
+    animation: slider 12s infinite, fade 4s;
+}
+    @keyframes slider {
+        0%, 33% {
+            background-image: url(./img/lazer.jpg);
+            --text-description: "Intervalo com os Colegas"
+        }
+        34%, 66% {
+            background-image: url(./img/biblioteca.jpg);
+            --text-description: "Projeto em grupo que realizamos"
+        }
+        67%, 100% {
+            background-image: url(./img/TurmaPingas.jpg);
+            --text-description: "Pessoal do ping pong infinito, felicidade"
+        }
+    }
+    @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    15%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+    </style>
 </head>
 <body class="grid h-screen w-screen center bg:#0003 place-items-center swiper progress-slide-carousel swiper-container relative">
     <div class="carrosel relative w-[80%] h-[80%] shadow-md rounded-xl bg-center bg-cover overflow-hidden animate-slide">
-        <img src="./img/lazer.jpg" alt="">
-        <img src="./img/TurmaPingas.jpg" alt="">
     </div>
 </body>
 </html>
