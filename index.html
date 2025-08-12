@@ -9,6 +9,18 @@
         .carrosel{
     animation: slider 12s infinite, fade 4s;
 }
+
+.carrosel::after {
+    content: var(--text-description);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
     @keyframes slider {
         0%, 33% {
             background-image: url(./img/lazer.jpg);
